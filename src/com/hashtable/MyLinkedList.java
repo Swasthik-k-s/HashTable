@@ -4,6 +4,10 @@ public class MyLinkedList<K,V> {
 	MyMapNode<K,V> head;
 	MyMapNode<K,V> tail;
 	
+	/**
+	 * Method to append the new node
+	 * @param newNode
+	 */
 	public void append(MyMapNode<K,V> newNode) {
 		if(this.head == null) {
 			this.head = newNode;
@@ -16,6 +20,11 @@ public class MyLinkedList<K,V> {
 		}
 	}
 	
+	/**
+	 * Method to search the key from the available nodes
+	 * @param key
+	 * @return
+	 */
 	public MyMapNode<K,V> search(K key){
 		MyMapNode<K,V> temp = head;
 		while(temp != null && temp.getNext() != null) {
@@ -30,4 +39,11 @@ public class MyLinkedList<K,V> {
 	public String printNodes() {
 		return "My Node[ " + head + " ]";
 	}
+
+	@Override
+	public String toString() {
+		return "My Node[ " + head + " ]";
+	}
+	
+	
 }
