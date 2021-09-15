@@ -7,6 +7,11 @@ public class MyHashMap<K,V> {
 		myLinkedList = new MyLinkedList<>();
 	}
 	
+	/**
+	 * Method to add the node into the LinkedList
+	 * @param key
+	 * @param value
+	 */
 	public void add(K key, V value) {
 		MyMapNode<K,V> myMapNode = myLinkedList.search(key);
 		if(myMapNode == null) {
@@ -17,6 +22,11 @@ public class MyHashMap<K,V> {
 		}
 	}
 	
+	/**
+	 * Method to get the key from the node
+	 * @param key
+	 * @return
+	 */
 	public V get(K key) {
 		MyMapNode<K, V> myMapNode = myLinkedList.search(key);
 		if (myMapNode == null) {
